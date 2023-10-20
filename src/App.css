@@ -1,38 +1,96 @@
-.App {
-  text-align: center;
-}
+@import url(https://fonts.googleapis.com/css?family=Lily+Script+One);
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+	margin:0;
+	font-family:arial,tahoma,sans-serif;
+	font-size:12px;
+	font-weight:normal;
+	direction:ltr;
+  background-image: url("https://wallpaperaccess.com/full/9187060.gif");
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App{
+  margin-top: 100px;
+  background-color: rgba(137, 123, 241, 0.4);
   display: flex;
   flex-direction: column;
-  align-items: center;
+  width: 60vh;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  text-align: center;
+  border-radius: 9px ;
+}
+label {
+	font-size:10px;
+	color:rgb(4, 4, 4);
+	cursor:pointer;
+}
+label,
+input {
+	float:left;
+	clear:both;
+}
+input {
+	margin:15px 0;
+	padding:15px 10px;
+	width:70%;
+	outline:none;
+	border:1px solid #bbb;
+	border-radius:20px;
+	display:inline-block;
+	-webkit-box-sizing:border-box;
+	   -moz-box-sizing:border-box;
+	        box-sizing:border-box;
+    -webkit-transition:0.2s ease all;
+	   -moz-transition:0.2s ease all;
+	    -ms-transition:0.2s ease all;
+	     -o-transition:0.2s ease all;
+	        transition:0.2s ease all;
 }
 
-.App-link {
-  color: #61dafb;
+
+button{
+  border-radius: 18px;
+  width: 100px;
+  height: 50px;
+  background-color: rgb(194, 61, 194);
+  color: aliceblue;
+  border: none;
+  font-family:'Times New Roman';
+	font-size:20px;
+	font-weight:bold;
+}
+button:hover{
+  background-color: black;
+  opacity: 0.8;
+}
+button:active{
+  opacity: 0.4;
+}
+input:focus{
+  border-color: aqua;
+  border-width: 2px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#logo {
+	margin:0 auto;
+	width:200px;
+	font-family:'Lily Script One';
+	font-size:50px;
+	font-weight:bold;
+	text-align:center;
+	color:lightgray;
+	-webkit-transition:0.2s ease all;
+	   -moz-transition:0.2s ease all;
+	    -ms-transition:0.2s ease all;
+	     -o-transition:0.2s ease all;
+	        transition:0.2s ease all;
+}
+
+#logo {
+	color:rgb(255, 255, 255);
+  text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF; 
+}
+
+h2{
+  color: aliceblue;
 }

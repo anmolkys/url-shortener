@@ -1,23 +1,33 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
+import axios from 'axios';
 
 function App() {
+  const [link,setLink] = useState("")
+  const [short,setShort] = useState("")
+  const baseURL = "https://anmolkys.onrender.com/i"
+
+  async function createPost() {
+    if(!link){
+      return null
+    }
+    else{
+      await axios.post(baseURL, {longURL: link,})
+      .then((response) => {
+        setShort("anmolkys.in/i/"+response.data.shortURL);
+      });
+    }
+  }
+
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h3 id="logo">URL Shortener</h3>
+      <input type='url'id='url' onChange={(e)=>{setLink(e.target.value)}} placeholder='Enter URL'></input>
+      <button onClick={createPost}>Shorten</button>
+      <h2>Shortened URL is :</h2>
+      <h2>{short}</h2>
     </div>
   );
 }
