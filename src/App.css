@@ -25,14 +25,15 @@ label {
 	cursor:pointer;
 }
 label,
-input {
+#url {
 	float:left;
 	clear:both;
 }
-input {
+#url {
 	margin:15px 0;
 	padding:15px 10px;
-	width:70%;
+	width:95%;
+	margin-left: 5%;
 	outline:none;
 	border:1px solid #bbb;
 	border-radius:20px;
@@ -48,10 +49,10 @@ input {
 }
 
 
-button{
+#button{
   border-radius: 18px;
-  width: 100px;
-  height: 50px;
+  width: 15vh;
+  height: 7vh;
   background-color: rgb(194, 61, 194);
   color: aliceblue;
   border: none;
@@ -59,23 +60,24 @@ button{
 	font-size:20px;
 	font-weight:bold;
 }
-button:hover{
+#button:hover{
   background-color: black;
   opacity: 0.8;
 }
-button:active{
+#button:active{
   opacity: 0.4;
 }
-input:focus{
+#url:focus{
   border-color: aqua;
   border-width: 2px;
 }
 
 #logo {
-	margin:0 auto;
-	width:200px;
+	margin-top: 3vh;
+
+	width:90%;
 	font-family:'Lily Script One';
-	font-size:50px;
+	font-size:5vh;
 	font-weight:bold;
 	text-align:center;
 	color:lightgray;
@@ -94,3 +96,9 @@ input:focus{
 h2{
   color: aliceblue;
 }
+
+@media only screen and (max-width: 600px) {
+	.App {
+	  width: 30vh;
+	}
+  }
