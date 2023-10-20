@@ -25,7 +25,7 @@ function App() {
     <div className="App">
       <h3 id="logo">URL Shortener</h3>
       <form onSubmit={(e)=>{e.preventDefault(); createPost()}}>
-      <input type='url'id='url' onChange={(e)=>{setLink(e.target.value)}} placeholder='Enter URL'></input>
+      <input type='url'id='url' onChange={(e)=>{setLink(e.target.value)}} placeholder='https://www.url.com'></input>
       <input type='submit' id='button'></input>
       </form>
       <h2>Shortened URL is :</h2>
