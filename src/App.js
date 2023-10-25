@@ -30,7 +30,7 @@ function App() {
       <input type='submit' id='button' value="↩"></input>
       </form>
       </div>
-      <a href={short}><h2>{short}</h2></a>
+      <a href={short}><h2 id='phone'>{short}</h2></a>
     </div>
   );
 }
