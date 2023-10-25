@@ -14,7 +14,7 @@ function App() {
     else{
       await axios.post(baseURL, {longURL: link,})
       .then((response) => {
-        setShort("anmolkys.in/i/"+response.data.shortURL);
+        setShort("https://anmolkys.onrender.com/i/"+response.data.shortURL);
       });
     }
   }
