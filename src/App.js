@@ -12,6 +12,10 @@ function App() {
       return null
     }
     else{
+      if(!short){
+        document.getElementById("phone").innerHTML="Loading...";
+
+      }
       await axios.post(baseURL, {longURL: link,})
       .then((response) => {
         setShort("https://anmolkys.onrender.com/i/"+response.data.shortURL);
