@@ -1,104 +1,157 @@
-@import url(https://fonts.googleapis.com/css?family=Lily+Script+One);
+@import url(https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800);
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300);
 
-body {
-	margin:0;
-	font-family:arial,tahoma,sans-serif;
-	font-size:12px;
-	font-weight:normal;
-	direction:ltr;
-  background-image: url("https://wallpaperaccess.com/full/9187060.gif");
+
+.header {
+  width: 100%;
+  height: 70px;
+  border-bottom: 1px solid black;
+  text-align: right;
+  position: relative;
+}
+.header .logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 32px;
+  font-weight: 100;
+  padding-top: 26px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.link {
+  display: inline-block;
+  padding: 15px 0;
+  margin: 15px 9px;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #0f0f0f;
+  font-weight: 800;
+  font-size: 24px;
+}
+.link .bar {
+  width: 100%;
+  display: inline-block;
+  border-bottom: 5px solid black;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  transition: all 300ms;
+}
+.link:hover .bar {
+  opacity: 0.5;
+  bottom: 5px;
+}
+
+a:link,
+ a:visited,
+ a:hover,
+ a:active {
+  color: inherit;
+  text-decoration: none;
 }
 .App{
-  margin-top: 100px;
-  background-color: rgba(137, 123, 241, 0.4);
-  display: flex;
-  flex-direction: column;
-  width: 60vh;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  border-radius: 9px ;
-}
-label {
-	font-size:10px;
-	color:rgb(4, 4, 4);
-	cursor:pointer;
-}
-label,
-#url {
-	float:left;
-	clear:both;
-}
-#url {
-	margin:15px 0;
-	padding:15px 10px;
-	width:95%;
-	margin-left: 5%;
-	outline:none;
-	border:1px solid #bbb;
-	border-radius:20px;
-	display:inline-block;
-	-webkit-box-sizing:border-box;
-	   -moz-box-sizing:border-box;
-	        box-sizing:border-box;
-    -webkit-transition:0.2s ease all;
-	   -moz-transition:0.2s ease all;
-	    -ms-transition:0.2s ease all;
-	     -o-transition:0.2s ease all;
-	        transition:0.2s ease all;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center ;
+	align-items: center;
 }
 
 
-#button{
-  border-radius: 18px;
-  width: 15vh;
-  height: 7vh;
-  background-color: rgb(194, 61, 194);
-  color: aliceblue;
-  border: none;
-  font-family:'Times New Roman';
-	font-size:20px;
-	font-weight:bold;
+ * {
+	 box-sizing: border-box;
 }
-#button:hover{
-  background-color: black;
-  opacity: 0.8;
+ .card {
+	 background-color: #ffffffc7;
+	 border-radius: 4px;
+	 margin: 10% auto;
+	 position: relative;
+	 padding: 34px;
+	 color: #444;
+	 cursor: pointer;
+	 display: flex;
+	 flex-direction: column;
+	 align-items: center;
+	 justify-content: center;
+	 text-align: center;
+	 border: 0.5px solid black;
 }
-#button:active{
-  opacity: 0.4;
+ .card:before {
+	 content: '';
+	 display: block;
+	 position: absolute;
+	 background-color: #ccc;
+	 left: 20px;
+	 right: 20px;
+	 bottom: 0;
+	 top: 50%;
+	 z-index: -1;
+	 box-shadow: 0 0 40px #999;
+	 transition: box-shadow 0.2s ease-in-out;
 }
-#url:focus{
-  border-color: aqua;
-  border-width: 2px;
+ .card.level-3:hover:before {
+	 box-shadow: 0 0 80px #999;
 }
-
-#logo {
-	margin-top: 3vh;
-
-	width:90%;
-	font-family:'Lily Script One';
-	font-size:5vh;
-	font-weight:bold;
-	text-align:center;
-	color:lightgray;
-	-webkit-transition:0.2s ease all;
-	   -moz-transition:0.2s ease all;
-	    -ms-transition:0.2s ease all;
-	     -o-transition:0.2s ease all;
-	        transition:0.2s ease all;
-}
-
-#logo {
-	color:rgb(255, 255, 255);
-  text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF; 
+ .card h5 {
+	 font-weight: 300;
+	 font-size: 30px;
 }
 
-h2{
-  color: aliceblue;
+#button {
+	margin: 1em;
+	padding: 5px 12px;
+	font-size: 20px;
+	font-weight: bold;
+	text-transform: uppercase;
+	cursor: pointer;
+	transition: all 0.6s ease;
+	border-radius: 50px;
 }
+
+#button {
+	box-shadow: 0 7px 0 -3px rgba(0, 0, 0, 1);
+}
+#button:hover {
+	box-shadow: none !important;
+}
+
+#url{
+	padding: .8rem;
+	font-size: 1em;
+	width: 15rem;
+	height: 20px;
+	border-radius: 25px;
+	box-shadow: 0 7px 0 -3px rgba(0, 0, 0, 1);
+	color: #000;
+	transition: all 0.6s ease;
+  }
+#url:focus {
+	box-shadow: none !important;
+}
+#url:invalid {
+	border: 2px solid #B00;
+	animation: shake 0.5s ease-in-out;
+}
+  
+  @keyframes shake {
+	0%, 100% {
+	  transform: translateX(0%);
+	}
+	10%, 30%, 50%, 70%, 90% {
+	  transform: translateX(-10px);
+	}
+	20%, 40%, 60%, 80% {
+	  transform: translateX(10px);
+	}
+}
+
 
 @media only screen and (max-width: 600px) {
-	.App {
-	  width: 30vh;
-	}
+  .project{
+    width: 100%;
   }
+}

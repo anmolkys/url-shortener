@@ -23,13 +23,14 @@ function App() {
 
   return (
     <div className="App">
+      <div className='card level-3'>
       <h3 id="logo">URL Shortener</h3>
       <form onSubmit={(e)=>{e.preventDefault(); createPost()}}>
       <input type='url'id='url' onChange={(e)=>{setLink(e.target.value)}} placeholder='https://www.url.com'></input>
-      <input type='submit' id='button'></input>
+      <input type='submit' id='button' value="↩"></input>
       </form>
-      <h2>Shortened URL is :</h2>
-      <h2>{short}</h2>
+      </div>
+      <a href={short}><h2>{short}</h2></a>
     </div>
   );
 }
