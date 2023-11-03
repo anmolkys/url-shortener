@@ -5,7 +5,7 @@ import axios from 'axios';
 function App() {
   const [link,setLink] = useState("")
   const [short,setShort] = useState("")
-  const baseURL = "https://anmolkys.onrender.com/i"
+  const baseURL = "https://link-shortener-production-13e4.up.railway.app/i"
 
   async function createPost() {
     if(!link){
