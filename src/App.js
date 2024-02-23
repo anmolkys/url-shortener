@@ -5,7 +5,7 @@ import axios from 'axios';
 function App() {
   const [link,setLink] = useState("")
   const [short,setShort] = useState("")
-  const baseURL = "https://link-shortener-production-13e4.up.railway.app/i"
+  const baseURL = "https://link-shortener-production-13e4.up.railway.app/i/"
 
   async function createPost() {
     if(!link){
@@ -18,7 +18,7 @@ function App() {
       }
       await axios.post(baseURL, {longURL: link,})
       .then((response) => {
-        setShort("https://anmolkys.onrender.com/i/"+response.data.shortURL);
+        setShort("https://link-shortener-production-13e4.up.railway.app/i/"+response.data.shortURL);
       });
     }
   }
