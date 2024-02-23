@@ -18,7 +18,7 @@ function App() {
       }
       await axios.post(baseURL, {longURL: link,})
       .then((response) => {
-        setShort("https://link-shortener-production-13e4.up.railway.app/i/"+response.data.shortURL);
+        setShort("molify.xyz/i/"+response.data.shortURL);
       });
     }
   }
