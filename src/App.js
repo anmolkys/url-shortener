@@ -18,7 +18,7 @@ function App() {
       }
       await axios.post(baseURL, {longURL: link,})
       .then((response) => {
-        setShort("https://molify.xyz/i/"+response.data.shortURL);
+        setShort("www.molify.xyz/i/"+response.data.shortURL);
       });
     }
   }
